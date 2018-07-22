@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>First test | 网站制作,网站开发,网站建设,冉姑娘网站工作室,冉祎航网站开发</title>
+  <title>hexo博客使用说明 | 网站制作,网站开发,网站建设,冉姑娘网站工作室,冉祎航网站开发</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="创建一个md文档，存放数据，可使用markdown编辑器创建文档">
+  <meta name="description" content="hexo博客使用相关设置">
+<meta name="keywords" content="hexo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="First test">
+<meta property="og:title" content="hexo博客使用说明">
 <meta property="og:url" content="http://yoursite.com/2018/07/17/hexo博客使用说明/index.html">
 <meta property="og:site_name" content="网站制作,网站开发,网站建设,冉姑娘网站工作室,冉祎航网站开发">
-<meta property="og:description" content="创建一个md文档，存放数据，可使用markdown编辑器创建文档">
+<meta property="og:description" content="hexo博客使用相关设置">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-17T05:03:23.281Z">
+<meta property="og:updated_time" content="2018-07-22T13:08:21.154Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="First test">
-<meta name="twitter:description" content="创建一个md文档，存放数据，可使用markdown编辑器创建文档">
+<meta name="twitter:title" content="hexo博客使用说明">
+<meta name="twitter:description" content="hexo博客使用相关设置">
   
     <link rel="alternative" href="/atom.xml" title="网站制作,网站开发,网站建设,冉姑娘网站工作室,冉祎航网站开发" type="application/atom+xml">
   
@@ -167,7 +168,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      First test
+      hexo博客使用说明
     </h1>
   
 
@@ -180,8 +181,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>创建一个md文档，存放数据，可使用markdown编辑器创建文档</p>
+        <p>hexo博客使用相关设置</p>
+<a id="more"></a>
+<p>1.设置文章的分类标题</p>
+<pre><code>第一步：在文章开头位置将toc设置为true，格式为：toc: true
+第二步：在头部设置tags（分类标题）: 标题名称
+</code></pre><p>2.文章内容过长时，会显示文章内的所有内容，怎样才能只显示文章摘要呢？</p>
+<pre><code>只要加入一个&lt;!-- more --&gt;这样的占位符在文章正文里面即可
 
+格式
+这就是一个简介
+&lt;!-- more --&gt;
+这里更多的内容
+</code></pre><p>3.删除一篇文章</p>
+<pre><code>删除文章的过程一样也很简单，先删除本地文件，然后通过生成和部署命令进而将远程仓库中的文件也一并删除。例：删除hello world.md文件
+
+首先进入到source / _post 文件夹中
+找到hello world.md文件，在本地直接执行删除。
+然后依次执行hexo g，hexo d
+再去主页查看你就会发现你的博客上面已经空空如也了
+或者直接使用./deploy.sh也可以
+</code></pre>
       
 
       
@@ -210,6 +230,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -278,7 +309,7 @@
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          hexo博客使用说明
+          First test
         
       </div>
     </a>
@@ -299,6 +330,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    目录，不存在的…
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
