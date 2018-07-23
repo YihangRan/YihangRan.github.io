@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="网站制作,网站开发,网站建设,冉姑娘网站工作室,冉祎航网站开发">
 <meta property="og:description" content="hexo博客使用相关设置">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-22T15:39:07.917Z">
+<meta property="og:updated_time" content="2018-07-23T08:52:58.367Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo博客使用说明">
 <meta name="twitter:description" content="hexo博客使用相关设置">
@@ -186,6 +186,27 @@
 <p>1.设置文章的分类标题</p>
 <pre><code>第一步：在文章开头位置将toc设置为true，格式为：toc: true
 第二步：在头部设置tags（分类标题）: 标题名称
+第三歩：在hexo的配置文件_config.yml最后添加
+jsonContent:
+meta: false
+pages: false
+posts:
+  title: true
+  date: true
+  path: true
+  text: false
+  raw: false
+  content: false
+  slug: false
+  updated: false
+  comments: false
+  link: false
+  permalink: false
+  excerpt: false
+  categories: false
+  tags: true 
+第四步：更新npm i hexo-generator-json-content --save
+第五步：./deploy.sh
 </code></pre><p>2.文章内容过长时，会显示文章内的所有内容，怎样才能只显示文章摘要呢？</p>
 <pre><code>只要加入一个&lt;!-- more --&gt;这样的占位符在文章正文里面即可
 
